@@ -38,7 +38,7 @@
 
   <section id="services" class="services section light-background">
     <div class="container section-title" data-aos="fade-up">
-      <h2>Fasilitas</h2>
+      <h2>Fasilitas Unggulan</h2>
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -58,7 +58,7 @@
                     fill="#f5f5f5">
                 </svg>
               </div>
-              <h3>perpustakaan</h3>
+              <p><?= $p['nama'] ?></p>
             </div>
           </div>
           <!-- End perpustakaan

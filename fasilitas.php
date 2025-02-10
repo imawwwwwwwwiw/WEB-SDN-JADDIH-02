@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
-<main class="main">
-  <!-- fasilitas  -->
+<!-- <main class="main">
   <section id="services" class="services section light-background">
     <div class="container section-title" data-aos="fade-up">
       <h2>Fasilitas</h2>
@@ -34,8 +33,6 @@
               </p>
             </div>
           </div>
-          <!-- End perpustakaan -->
-
           <div
             class="col-lg-4 col-md-6"
             data-aos="fade-up"
@@ -63,7 +60,6 @@
               </p>
             </div>
           </div>
-          <!-- End ruang belajar -->
 
           <div
             class="col-lg-4 col-md-6"
@@ -92,7 +88,6 @@
               </p>
             </div>
           </div>
-          <!-- End lapangan -->
 
           <div
             class="col-lg-4 col-md-6"
@@ -121,7 +116,6 @@
               </p>
             </div>
           </div>
-          <!-- End musholla -->
 
           <div
             class="col-lg-4 col-md-6"
@@ -150,7 +144,6 @@
               </p>
             </div>
           </div>
-          <!-- End ruang uks -->
 
           <div
             class="col-lg-4 col-md-6"
@@ -184,6 +177,38 @@
   </div>
   </div>
   </section>
-</main>
+</main> -->
+<div class="section">
+  <div class="container">
+    <h3 class="text-center">Jurusan</h3>
 
+    <?php
+    $jurusan = mysqli_query($conn, "SELECT * FROM fasilitas ORDER BY id DESC");
+    if (mysqli_num_rows($jurusan) > 0) {
+      while ($j = mysqli_fetch_array($jurusan)) {
+    ?>
+
+        <div class="col-4">
+          <a href="detail-jurusan.php?id=<?= $j['id'] ?>" class="thumbnail-link">
+            <div class="thumbnail-box">
+              <div class="thumbail-img" style="background-image: url('uploads/jurusan/<?= $j['gambar'] ?>');">
+              </div>
+
+              <div class="thumbnail-text">
+                <?= $j['nama'] ?>
+              </div>
+
+            </div>
+          </a>
+        </div>
+
+      <?php }
+    } else { ?>
+
+      Tidak ada data
+
+    <?php } ?>
+
+  </div>
+</div>
 <?php include 'footer.php'; ?>
