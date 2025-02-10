@@ -191,7 +191,7 @@
         <div class="col-4">
           <a href="detail-jurusan.php?id=<?= $j['id'] ?>" class="thumbnail-link">
             <div class="thumbnail-box">
-              <div class="thumbail-img" style="background-image: url('uploads/jurusan/<?= $j['gambar'] ?>');">
+              <div class="thumbail-img" style="background-image: url('assets/uploads/jurusan/<?= $j['gambar'] ?>');">
               </div>
 
               <div class="thumbnail-text">

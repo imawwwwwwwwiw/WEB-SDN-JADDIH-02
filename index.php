@@ -57,12 +57,12 @@
                     stroke-width="0"
                     fill="#f5f5f5">
                 </svg>
+                <div>
+                  <!-- <p><?= $j['nama'] ?></p> -->
+                </div>
               </div>
-              <p><?= $p['nama'] ?></p>
             </div>
           </div>
-          <!-- End perpustakaan
-          <?= $j['nama'] ?> -->
 
           <div
             class="col-lg-4 col-md-6"
