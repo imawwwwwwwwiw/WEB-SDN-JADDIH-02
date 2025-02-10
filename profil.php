@@ -20,13 +20,9 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <div class="testimonial-item">
                 <h3>Visi</h3>
-                <h4>Lorem ipsum dolor sit amet.</h4>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec
-                    porttitora entum suscipit rhoncus. Accusantium quam,
-                    ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                    risus at semper.</span>
+                  <span><?= $d->Isi_Visi ?></span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -35,13 +31,9 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <div class="testimonial-item">
                 <h3>Misi</h3>
-                <h4>Lorem ipsum dolor sit amet.</h4>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse
-                    labore quem cillum quid cillum eram malis quorum velit fore
-                    eram velit sunt aliqua noster fugiat irure amet legam anim
-                    culpa.</span>
+                  <span><?= $d->Isi_Misi ?></span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>

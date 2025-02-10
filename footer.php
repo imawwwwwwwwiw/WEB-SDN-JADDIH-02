@@ -6,8 +6,8 @@
                     <span class="sitename">kontak 1</span>
                 </a>
                 <div class="footer-contact pt-3">
-                    <p>A108 Adam Street</p>
-                    <p>New York, NY 535022</p>
+                    <p>Nur Hasanah</p>
+                    <p>Jl Kardu Dsn Jaddih Utara II</p>
                     <p class="mt-3">
                         <strong>Phone:</strong> <span>+1 5589 55488 55</span>
                     </p>
@@ -20,8 +20,8 @@
                     <span class="sitename">kontak 2</span>
                 </a>
                 <div class="footer-contact pt-3">
-                    <p>A108 Adam Street</p>
-                    <p>New York, NY 535022</p>
+                    <p>Moh Tasir</p>
+                    <p>Jl Kardu Dsn Jaddih Utara II</p>
                     <p class="mt-3">
                         <strong>Phone:</strong> <span>+1 5589 55488 55</span>
                     </p>
