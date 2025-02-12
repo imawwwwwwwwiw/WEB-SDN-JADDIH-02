@@ -8,7 +8,7 @@
       data-bs-ride="carousel"
       data-bs-interval="5000">
       <div class="carousel-item active">
-        <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="" />
+        <img src="assets/uploads/identitas/<?= $d->background ?>" alt="" />
         <div class="container">
           <h2>Selamat Datang di SD Negeri Jaddih 02</h2>
           <p>SD NEGERI JADDIH 2 merupakan salah satu sekolah jenjang SD berstatus Negeri yang didirikan pada tanggal 1 Januari 1962.</p>
@@ -22,7 +22,7 @@
       <div class="container">
         <div class="row position-relative">
           <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/<?= $d->foto_kepsek ?>" />
+            <img src="assets/uploads/identitas/<?= $d->foto_kepsek ?>" />
           </div>
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
             <div class="our-story">

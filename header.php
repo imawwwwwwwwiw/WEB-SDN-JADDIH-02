@@ -46,13 +46,13 @@ $d = mysqli_fetch_object($identitas);
 	<header id="header" class="header d-flex align-items-center sticky-top">
 		<div class="container position-relative d-flex align-items-center">
 			<a href="index.php" class="logo d-flex align-items-center me-auto">
-				<img src="assets/img/logo.png" width="40">
+				<img src="assets/uploads/identitas/<?= $d->logo_sekolah ?>" width="40" />
 				<h1 class="sitename">SD Negeri Jaddih 02</h1>
 				<span>.</span>
 			</a>
 			<nav id="navmenu" class="navmenu">
 				<ul>
-					<li><a href="index.php" class="active">Beranda</a></li>
+					<li><a href="index.php">Beranda</a></li>
 					<li><a href="profil.php">Profil</a></li>
 					<li><a href="fasilitas.php">Fasilitas</a></li>
 					<li class="dropdown"><a href="informasi.php"><span>Informasi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
