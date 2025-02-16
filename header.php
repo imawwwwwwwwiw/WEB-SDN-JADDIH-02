@@ -11,12 +11,12 @@ $d = mysqli_fetch_object($identitas);
 <head>
 	<meta charset="utf-8" />
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	<title>Index - SD Negeri Jaddih 02</title>
+	<title>SD Negeri Jaddih 02</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 
 	<!-- Favicons -->
-	<link href="assets/img/favicon.png" rel="icon" />
+	<link href="assets/img/logo.png" rel="icon" />
 	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
 	<!-- Font -->

@@ -77,7 +77,7 @@ INSERT INTO `informasi` (`id`, `judul`, `keterangan`, `gambar`, `created_at`, `u
 -- Table structure for table `jurusan`
 --
 
-CREATE TABLE `jurusan` (
+CREATE TABLE `fasilitas` (
   `id` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `keterangan` text NOT NULL,
@@ -87,10 +87,10 @@ CREATE TABLE `jurusan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `jurusan`
+-- Dumping data for table `fasilitas`
 --
 
-INSERT INTO `jurusan` (`id`, `nama`, `keterangan`, `gambar`, `created_at`, `updated_at`) VALUES
+INSERT INTO `fasilitas` (`id`, `nama`, `keterangan`, `gambar`, `created_at`, `updated_at`) VALUES
 (1, 'Teknik Audio Video', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'jurusan1630509461.jpg', '2021-09-01 15:17:41', '2021-09-01 22:20:13'),
 (2, 'Teknik Instalasi Listrik', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'jurusan1630509492.jpg', '2021-09-01 15:18:12', '2021-09-01 22:20:07'),
 (3, 'Teknik Otomotif Kendaraan Ringan', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'jurusan1630509515.jpeg', '2021-09-01 15:18:35', '2021-09-01 22:20:01'),

@@ -37,7 +37,7 @@
 
 <section id="services" class="services section light-background">
   <div class="container section-title" data-aos="fade-up">
-    <h2>Fasilitas Unggulan</h2>
+    <h2>Berita Terbaru</h2>
     <div class="container">
       <?php
       $jurusan = mysqli_query($conn, "SELECT * FROM fasilitas");
@@ -48,7 +48,7 @@
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div class="service-item item-cyan position-relative">
                 <div class="icon">
-                  <div cl ass="thumbail-img" style="background-image: url('assets/img/<?= $j['gambar'] ?>');">
+                  <div cl ass="thumbail-img" style="background-image: url('assets/uploads/fasilitas/<?= $j['gambar'] ?>');">
                   </div>
                   <img src="" alt="">
                   <svg
