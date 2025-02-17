@@ -907,6 +907,9 @@ section,
   text-align: center;
   transition: 0.3s;
   border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .services .service-item .icon {
@@ -914,6 +917,8 @@ section,
   width: 100px;
   height: 100px;
   display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   transition: ease-in-out 0.3s;
@@ -926,7 +931,7 @@ section,
   position: relative;
 }
 
-.services .service-item .icon svg {
+/* .services .service-item .icon svg {
   position: absolute;
   top: 0;
   left: 0;
@@ -935,7 +940,7 @@ section,
 .services .service-item .icon svg path {
   transition: 0.5s;
   fill: color-mix(in srgb, var(--default-color), transparent 95%);
-}
+} */
 
 .services .service-item h3 {
   font-weight: 700;

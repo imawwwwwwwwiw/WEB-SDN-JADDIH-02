@@ -3,91 +3,74 @@
   <section id="portfolio" class="portfolio section">
     <div class="container section-title" data-aos="fade-up">
       <h2>Galeri</h2>
-      <div class="container">
-        <div
-          class="isotope-layout"
-          data-default-filter="*"
-          data-layout="masonry"
-          data-sort="original-order">
-          <ul
-            class="portfolio-filters isotope-filters"
+      <?php
+      $galeri = mysqli_query($conn, "SELECT * FROM galeri ORDER BY id DESC");
+      if (mysqli_num_rows($galeri) > 0) {
+        while ($p = mysqli_fetch_array($galeri)) {
+      ?>
+          <div
+            class="isotope-container"
             data-aos="fade-up"
-            data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul>
-
-
-          <?php
-          $galeri = mysqli_query($conn, "SELECT * FROM galeri ORDER BY id DESC");
-          if (mysqli_num_rows($galeri) > 0) {
-            while ($p = mysqli_fetch_array($galeri)) {
-          ?>
-              <div
-                class="row gy-4 isotope-container"
-                data-aos="fade-up"
-                data-aos-delay="200">
-                <div
-                  class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                  <img
-                    src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
-                    class="img-fluid"
-                    alt="" />
-                  <div class="portfolio-info">
-                    <h4>Product 1</h4>
-                    <p><?= $p['keterangan'] ?></p>
-                    <a
-                      href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                      title="<p>"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div>
-
-              <?php }
-          } else { ?>
-
-              Tidak ada data
-
-            <?php } ?>
-
+            data-aos-delay="200">
             <div
-              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="thumbnail-box">
-                <img
-                  style="background-image: url('uploads/galeri/<?= $p['foto'] ?>')"
-                  class="img-fluid"
-                  alt="" />
-                <div class="portfolio-info">
-                  <h4></h4>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                    title="Product 1"
-                    data-gallery="portfolio-gallery-product"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-
-                </div>
+              class="col-lg-4 col-md-6 portfolio-item isotope-item ">
+              <img
+                src="assets/uploads/galeri/<?= $p['foto'] ?>"
+                class="img-fluid"
+                alt="" />
+              <div class="portfolio-info">
+                <p><?= $p['keterangan'] ?></p>
+                <a
+                  href="assets/uploads/galeri/<?= $p['foto'] ?>"
+                  title="<p><?= $p['keterangan'] ?></p>"
+                  data-gallery="portfolio-gallery-product"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
+            </div>
 
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                  class="img-fluid"
-                  alt="" />
-                <div class="portfolio-info">
-                  <h4><?= $p['keterangan'] ?></h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                    title="<p>"
-                    data-gallery="portfolio-gallery-product"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </div>
-              <!-- 
+
+          <?php }
+      } else { ?>
+
+          Tidak ada data
+
+        <?php } ?>
+
+        <!-- <div
+          class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="thumbnail-box">
+            <img
+              style="background-image: url('uploads/galeri/<?= $p['foto'] ?>')"
+              class="img-fluid"
+              alt="" />
+            <div class="portfolio-info">
+              <h4></h4>
+              <a
+                href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
+                title="Product 1"
+                data-gallery="portfolio-gallery-product"
+                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <img
+              src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
+              class="img-fluid"
+              alt="" />
+            <div class="portfolio-info">
+              <h4><?= $p['keterangan'] ?></h4>
+              <p>Lorem ipsum, dolor sit</p>
+              <a
+                href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
+                title="<p>"
+                data-gallery="portfolio-gallery-product"
+                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div> -->
+        <!-- 
             <div
               class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <img
