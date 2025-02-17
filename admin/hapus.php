@@ -1,75 +1,63 @@
-<?php 
+<?php
 
-	include '../koneksi.php';
+include '../koneksi.php';
 
-	if(isset($_GET['idpengguna'])){
+if (isset($_GET['idpengguna'])) {
 
-		$delete = mysqli_query($conn, "DELETE FROM pengguna WHERE id = '".$_GET['idpengguna']."' ");
-		echo "<script>window.location = 'pengguna.php'</script>";
+	$delete = mysqli_query($conn, "DELETE FROM pengguna WHERE id = '" . $_GET['idpengguna'] . "' ");
+	echo "<script>window.location = 'pengguna.php'</script>";
+}
 
-	}
+if (isset($_GET['idfasilitas'])) {
 
-	if(isset($_GET['idjurusan'])){
+	$fasilitas = mysqli_query($conn, "SELECT gambar FROM fasilitas WHERE id = '" . $_GET['idfasilitas'] . "' ");
 
-		$jurusan = mysqli_query($conn, "SELECT gambar FROM jurusan WHERE id = '".$_GET['idjurusan']."' ");
+	if (mysqli_num_rows($fasilitas) > 0) {
 
-		if(mysqli_num_rows($jurusan) > 0){
+		$p = mysqli_fetch_object($fasilitas);
 
-			$p = mysqli_fetch_object($jurusan);
+		if (file_exists("../uploads/fasilitas/" . $p->gambar)) {
 
-			if(file_exists("../uploads/jurusan/".$p->gambar)){
-
-				unlink("../uploads/jurusan/".$p->gambar);
-
-			}
-
+			unlink("../uploads/fasilitas/" . $p->gambar);
 		}
-
-		$delete = mysqli_query($conn, "DELETE FROM jurusan WHERE id = '".$_GET['idjurusan']."' ");
-		echo "<script>window.location = 'jurusan.php'</script>";
-
 	}
 
-	if(isset($_GET['idgaleri'])){
+	$delete = mysqli_query($conn, "DELETE FROM fasilitas WHERE id = '" . $_GET['idfasilitas'] . "' ");
+	echo "<script>window.location = 'fasilitas.php'</script>";
+}
 
-		$galeri = mysqli_query($conn, "SELECT foto FROM galeri WHERE id = '".$_GET['idgaleri']."' ");
+if (isset($_GET['idgaleri'])) {
 
-		if(mysqli_num_rows($galeri) > 0){
+	$galeri = mysqli_query($conn, "SELECT foto FROM galeri WHERE id = '" . $_GET['idgaleri'] . "' ");
 
-			$p = mysqli_fetch_object($galeri);
+	if (mysqli_num_rows($galeri) > 0) {
 
-			if(file_exists("../uploads/galeri/".$p->foto)){
+		$p = mysqli_fetch_object($galeri);
 
-				unlink("../uploads/galeri/".$p->foto);
+		if (file_exists("../uploads/galeri/" . $p->foto)) {
 
-			}
-
+			unlink("../uploads/galeri/" . $p->foto);
 		}
-
-		$delete = mysqli_query($conn, "DELETE FROM galeri WHERE id = '".$_GET['idgaleri']."' ");
-		echo "<script>window.location = 'galeri.php'</script>";
-
 	}
 
-	if(isset($_GET['idinformasi'])){
+	$delete = mysqli_query($conn, "DELETE FROM galeri WHERE id = '" . $_GET['idgaleri'] . "' ");
+	echo "<script>window.location = 'galeri.php'</script>";
+}
 
-		$informasi = mysqli_query($conn, "SELECT gambar FROM informasi WHERE id = '".$_GET['idinformasi']."' ");
+if (isset($_GET['idinformasi'])) {
 
-		if(mysqli_num_rows($informasi) > 0){
+	$informasi = mysqli_query($conn, "SELECT gambar FROM informasi WHERE id = '" . $_GET['idinformasi'] . "' ");
 
-			$p = mysqli_fetch_object($informasi);
+	if (mysqli_num_rows($informasi) > 0) {
 
-			if(file_exists("../uploads/informasi/".$p->gambar)){
+		$p = mysqli_fetch_object($informasi);
 
-				unlink("../uploads/informasi/".$p->gambar);
+		if (file_exists("../uploads/informasi/" . $p->gambar)) {
 
-			}
-
+			unlink("../uploads/informasi/" . $p->gambar);
 		}
-
-		$delete = mysqli_query($conn, "DELETE FROM informasi WHERE id = '".$_GET['idinformasi']."' ");
-		echo "<script>window.location = 'informasi.php'</script>";
-
 	}
 
-?>
+	$delete = mysqli_query($conn, "DELETE FROM informasi WHERE id = '" . $_GET['idinformasi'] . "' ");
+	echo "<script>window.location = 'informasi.php'</script>";
+}

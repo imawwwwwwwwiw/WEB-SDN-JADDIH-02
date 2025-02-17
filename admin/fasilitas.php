@@ -13,7 +13,7 @@
 
 			<div class="box-body">
 
-				<a href="tambah-jurusan.php" class="text-green"><i class="fa fa-plus"></i> Tambah</a>
+				<a href="tambah-fasilitas.php" class="text-green"><i class="fa fa-plus"></i> Tambah</a>
 
 				<?php
 				if (isset($_GET['success'])) {
@@ -49,19 +49,19 @@
 							$where .= " AND nama LIKE '%" . addslashes($_GET['key']) . "%' ";
 						}
 
-						$jurusan = mysqli_query($conn, "SELECT * FROM jurusan $where ORDER BY id DESC");
-						if (mysqli_num_rows($jurusan) > 0) {
-							while ($p = mysqli_fetch_array($jurusan)) {
+						$fasilitas = mysqli_query($conn, "SELECT * FROM fasilitas $where ORDER BY id DESC");
+						if (mysqli_num_rows($fasilitas) > 0) {
+							while ($p = mysqli_fetch_array($fasilitas)) {
 						?>
 
 								<tr>
 									<td><?= $no++ ?></td>
 									<td><?= $p['nama'] ?></td>
 									<td><?= $p['keterangan'] ?></td>
-									<td><img src="../uploads/jurusan/<?= $p['gambar'] ?>" width="100px"></td>
+									<td><img src="../uploads/fasilitas/<?= $p['gambar'] ?>" width="100px"></td>
 									<td>
-										<a href="edit-jurusan.php?id=<?= $p['id'] ?>" title="Edit Data" class="text-orange"><i class="fa fa-edit"></i></a>
-										<a href="hapus.php?idjurusan=<?= $p['id'] ?>" onclick="return confirm('Yakin ingin hapus ?')" title="Hapus Data" class="text-red"><i class="fa fa-times"></i></a>
+										<a href="edit-fasilitas.php?id=<?= $p['id'] ?>" title="Edit Data" class="text-orange"><i class="fa fa-edit"></i></a>
+										<a href="hapus.php?idfasilitas=<?= $p['id'] ?>" onclick="return confirm('Yakin ingin hapus ?')" title="Hapus Data" class="text-red"><i class="fa fa-times"></i></a>
 									</td>
 								</tr>
 

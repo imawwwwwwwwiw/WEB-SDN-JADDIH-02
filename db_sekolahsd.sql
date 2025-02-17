@@ -74,7 +74,7 @@ INSERT INTO `informasi` (`id`, `judul`, `keterangan`, `gambar`, `created_at`, `u
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jurusan`
+-- Table structure for table `fasilitas`
 --
 
 CREATE TABLE `fasilitas` (
@@ -91,11 +91,11 @@ CREATE TABLE `fasilitas` (
 --
 
 INSERT INTO `fasilitas` (`id`, `nama`, `keterangan`, `gambar`, `created_at`, `updated_at`) VALUES
-(1, 'Teknik Audio Video', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'jurusan1630509461.jpg', '2021-09-01 15:17:41', '2021-09-01 22:20:13'),
-(2, 'Teknik Instalasi Listrik', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'jurusan1630509492.jpg', '2021-09-01 15:18:12', '2021-09-01 22:20:07'),
-(3, 'Teknik Otomotif Kendaraan Ringan', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'jurusan1630509515.jpeg', '2021-09-01 15:18:35', '2021-09-01 22:20:01'),
-(4, 'Teknik Otomotif Sepeda Motor', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'jurusan1630509536.jpg', '2021-09-01 15:18:56', '2021-09-01 22:19:53'),
-(5, 'Teknik Pengelasan', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'jurusan1630509549.jpg', '2021-09-01 15:19:09', '2021-09-01 22:19:44');
+(1, 'Teknik Audio Video', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'fasilitas1630509461.jpg', '2021-09-01 15:17:41', '2021-09-01 22:20:13'),
+(2, 'Teknik Instalasi Listrik', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'fasilitas1630509492.jpg', '2021-09-01 15:18:12', '2021-09-01 22:20:07'),
+(3, 'Teknik Otomotif Kendaraan Ringan', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'fasilitas1630509515.jpeg', '2021-09-01 15:18:35', '2021-09-01 22:20:01'),
+(4, 'Teknik Otomotif Sepeda Motor', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'fasilitas1630509536.jpg', '2021-09-01 15:18:56', '2021-09-01 22:19:53'),
+(5, 'Teknik Pengelasan', 'Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when.', 'fasilitas1630509549.jpg', '2021-09-01 15:19:09', '2021-09-01 22:19:44');
 
 -- --------------------------------------------------------
 
@@ -169,9 +169,9 @@ ALTER TABLE `informasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `jurusan`
+-- Indexes for table `fasilitas`
 --
-ALTER TABLE `jurusan`
+ALTER TABLE `fasilitas`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -203,9 +203,9 @@ ALTER TABLE `informasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `jurusan`
+-- AUTO_INCREMENT for table `fasilitas`
 --
-ALTER TABLE `jurusan`
+ALTER TABLE `fasilitas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --

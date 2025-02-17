@@ -40,9 +40,9 @@
     <h2>Berita Terbaru</h2>
     <div class="container">
       <?php
-      $jurusan = mysqli_query($conn, "SELECT * FROM fasilitas");
-      if (mysqli_num_rows($jurusan) > 0) {
-        while ($j = mysqli_fetch_array($jurusan)) {
+      $fasilitas = mysqli_query($conn, "SELECT * FROM fasilitas");
+      if (mysqli_num_rows($fasilitas) > 0) {
+        while ($j = mysqli_fetch_array($fasilitas)) {
       ?>
           <div class="row gy-4">
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
