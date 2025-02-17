@@ -1,6 +1,6 @@
 <footer id="footer" class="footer dark-background">
     <div class="container footer-top">
-        <div class="row gy-4">
+        <div class="row gy-6">
             <div class="col-lg-4 col-md-6 footer-about">
                 <a href="index.html" class="logo d-flex align-items-center">
                     <span class="sitename">kontak 1</span>
@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 footer-about">
+            <div class="col-lg-4 footer-about">
                 <a href="index.html" class="logo d-flex align-items-center">
                     <span class="sitename">kontak 2</span>
                 </a>
@@ -63,9 +63,6 @@
     href="#"
     id="scroll-top"
     class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<!-- Preloader -->
-<div id="preloader"></div>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -34,7 +34,6 @@
       </div>
   </section>
 </main>
-
 <section id="services" class="services section light-background">
   <div class="container section-title" data-aos="fade-up">
     <h2>Berita Terbaru</h2>
@@ -42,31 +41,22 @@
       <?php
       $fasilitas = mysqli_query($conn, "SELECT * FROM fasilitas");
       if (mysqli_num_rows($fasilitas) > 0) {
-        while ($j = mysqli_fetch_array($fasilitas)) {
       ?>
-          <div class="row gy-4">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item item-cyan position-relative">
+        <div class="row">
+          <?php while ($j = mysqli_fetch_array($fasilitas)) { ?>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="post-img position-relative overflow" style="margin: 10px;">
                 <div class="icon">
-                  <div cl ass="thumbail-img" style="background-image: url('assets/uploads/fasilitas/<?= $j['gambar'] ?>');">
+                  <div class="service-item row position">
+                    <img src="assets/uploads/fasilitas/<?= $j['gambar'] ?>" />
+                    <h3><?= $j['nama'] ?></h3>
+                    <p><?= $j['keterangan'] ?></p>
                   </div>
-                  <img src="" alt="">
-                  <svg
-                    width="100"
-                    height="100"
-                    viewBox="0 0 600 600">
-                    <path
-                      stroke="none"
-                      stroke-width="0"
-                      fill="#f5f5f5">
-                  </svg>
                 </div>
-                <h3><?= $j['nama'] ?></h3>
-                <p><?= $j['keterangan'] ?></p>
               </div>
             </div>
           <?php }
-      } else { ?>
+        } else { ?>
           Tidak ada data
         <?php } ?>
 </section>
