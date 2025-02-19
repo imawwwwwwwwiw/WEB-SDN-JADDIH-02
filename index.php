@@ -10,8 +10,8 @@
       <div class="carousel-item active">
         <img src="assets/uploads/identitas/<?= $d->background ?>" alt="" />
         <div class="container">
-          <h2>Selamat Datang di SD Negeri Jaddih 02</h2>
-          <p>SD NEGERI JADDIH 2 merupakan salah satu sekolah jenjang SD berstatus Negeri yang didirikan pada tanggal 1 Januari 1962.</p>
+          <h2>SELAMAT DATANG DI SD NEGERI JADDIH 02</h2>
+          <p>SD Negeri Jaddih 2 merupakan salah satu sekolah jenjang SD berstatus Negeri yang didirikan pada tanggal 1 Januari 1962.</p>
         </div>
       </div>
     </div>
