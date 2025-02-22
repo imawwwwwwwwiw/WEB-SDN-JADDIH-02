@@ -23,7 +23,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="portfolio-info">
                         <h3>Pembukaan PPDB</h3>
@@ -37,6 +36,5 @@
             </div>
         </div>
     </section>
-    <!-- /Portfolio Details Section -->
 </main>
 <?php include 'footer.php'; ?>

@@ -9,9 +9,9 @@
                     <p>Nur Hasanah</p>
                     <p>Jl Kardu Dsn Jaddih Utara II</p>
                     <p class="mt-3">
-                        <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+                        <strong>Phone:</strong> <span>+62 822-4453-0114</span>
                     </p>
-                    <p><strong>Email:</strong> <span>info@example.com</span></p>
+                    <p><strong>Email:</strong> <span>nurhasanahjaddih2@gmail.com</span></p>
                 </div>
             </div>
 
@@ -34,10 +34,10 @@
                     <span class="sitename">kontak 3</span>
                 </a>
                 <div class="footer-contact pt-3">
-                    <p>A108 Adam Street</p>
-                    <p>New York, NY 535022</p>
+                    <p>Nur Hidayati</p>
+                    <p>Jl Sidingkap</p>
                     <p class="mt-3">
-                        <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+                        <strong>Phone:</strong> <span>+62 813-3291-3131</span>
                     </p>
                     <p><strong>Email:</strong> <span>info@example.com</span></p>
                 </div>
@@ -58,21 +58,22 @@
         </div>
 </footer>
 
-<!-- Scroll Top -->
+<!-- Scroll Keatas -->
 <a
     href="#"
     id="scroll-top"
     class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<!-- Vendor JS Files -->
+<!-- Vendor JS  -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Main JS File -->
+<!-- Main JS  -->
 <script src="assets/js/main.js"></script>
 </body>
 
