@@ -27,9 +27,9 @@
                     <div class="portfolio-info">
                         <h3>Pembukaan PPDB</h3>
                         <ul>
-                            <li><strong>Tanggal</strong> 01 juni, 2025</li>
-                            <li><strong>Lokasi</strong> SDN Jaddih 02</li>
-                            <li><strong>Jadwal Masuk</strong> 01 Juli, 2025</li>
+                            <li><strong>Tanggal</strong> Web design</li>
+                            <li><strong>Lokasi</strong> ASU Company</li>
+                            <li><strong>Jadwal Masuk</strong> 01 March, 2020</li>
                         </ul>
                     </div>
                 </div>
