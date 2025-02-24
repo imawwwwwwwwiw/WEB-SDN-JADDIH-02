@@ -8,16 +8,13 @@
       if (mysqli_num_rows($galeri) > 0) {
         while ($p = mysqli_fetch_array($galeri)) {
       ?>
-          <div
-            class="isotope-container"
-            data-aos="fade-up"
-            data-aos-delay="200">
+          <div class="isotope-container" data-aos="fade-up" data-aos-delay="200">
             <div
               class="col-lg-4 col-md-6 portfolio-item isotope-item ">
-              <img
-                src="assets/uploads/galeri/<?= $p['foto'] ?>"
-                class="img-fluid"
-                alt="" />
+              <div class="service-item row position">
+                <img
+                  src="assets/uploads/galeri/<?= $p['foto'] ?>" />
+              </div>
               <div class="portfolio-info">
                 <p><?= $p['keterangan'] ?></p>
                 <a
@@ -27,8 +24,6 @@
                   class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
-
-
           <?php }
       } else { ?>
 

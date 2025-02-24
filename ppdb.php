@@ -10,7 +10,11 @@
                         <h3>Persyaratan PPDB SDN Jaddih 02</h3>
                         <p>
                             <i class="bi bi-caret-right-fill"></i>
-                            <span>Export tempor illum tamen malis malis eram quae irure.</span>
+                            <span>Akta kelahiran atau surat keterangan lahir.</span>
+                        </p>
+                        <p>
+                            <i class="bi bi-caret-right-fill"></i>
+                            <span>Kartu keluarga (KK).</span>
                         </p>
 
                         <p>
@@ -23,16 +27,28 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-info">
-                        <h3>Pembukaan PPDB</h3>
-                        <ul>
-                            <li><strong>Tanggal</strong> Web design</li>
-                            <li><strong>Lokasi</strong> ASU Company</li>
-                            <li><strong>Jadwal Masuk</strong> 01 March, 2020</li>
-                        </ul>
-                    </div>
-                </div>
+                <?php
+                $ppdb = mysqli_query($conn, "SELECT * FROM ppdb");
+                if (mysqli_num_rows($ppdb) > 0) {
+                    while ($p = mysqli_fetch_array($ppdb)) {
+                ?>
+                        <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                            <div class="portfolio-info">
+                                <h3>Pembukaan PPDB</h3>
+                                <ul>
+                                    <li><strong>Tanggal</strong> <?= $p['tanggal'] ?></li>
+                                    <li><strong>Lokasi</strong> <?= $p['lokasi'] ?></li>
+                                    <li><strong>Jadwal Masuk</strong> <?= $p['jadwal_masuk'] ?></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    <?php }
+                } else { ?>
+
+                    Tidak ada data
+
+                <?php } ?>
             </div>
         </div>
     </section>
