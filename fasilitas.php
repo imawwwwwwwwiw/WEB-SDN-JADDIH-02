@@ -15,7 +15,7 @@
                   <div class="icon">
                     <div class="service-item row position">
                       <img src="assets/uploads/fasilitas/<?= $j['gambar'] ?>" />
-                      <h3><?= $j['nama'] ?></h3>
+                      <h4><?= $j['nama'] ?></h4>
                       <p><?= $j['keterangan'] ?></p>
                     </div>
                   </div>

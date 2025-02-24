@@ -4,7 +4,7 @@
     <div class="container section-title" data-aos="fade-up">
       <h2>Galeri</h2>
       <?php
-      $galeri = mysqli_query($conn, "SELECT * FROM galeri ORDER BY id DESC");
+      $galeri = mysqli_query($conn, "SELECT * FROM galeri ORDER BY id ASC");
       if (mysqli_num_rows($galeri) > 0) {
         while ($p = mysqli_fetch_array($galeri)) {
       ?>

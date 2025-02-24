@@ -15,7 +15,7 @@ $d = mysqli_fetch_object($identitas);
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 
-	<!-- Favicons -->
+
 	<link href="assets/uploads/identitas/<?= $d->logo_sekolah ?>" rel="icon" />
 
 	<!-- Font -->
@@ -57,7 +57,7 @@ $d = mysqli_fetch_object($identitas);
 					<li class="dropdown"><a href="informasi.php"><span>Informasi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 						<ul>
 							<li><a href="ppdb.php">PPDB</a></li>
-							<li><a href="prestasi.php">Prestasi</a></li>
+							<li><a href="prestasi.php">BERITA</a></li>
 						</ul>
 					<li><a href="galeri.php">Galeri</a></li>
 					<li><a href="kontak.php">Kontak</a></li>

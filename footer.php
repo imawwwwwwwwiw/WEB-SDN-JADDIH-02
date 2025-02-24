@@ -25,7 +25,7 @@
                     <p class="mt-3">
                         <strong>Phone:</strong> <span>+62 857-3128-3939</span>
                     </p>
-                    <p><strong>Email:</strong> <span>info@example.com</span></p>
+                    <p><strong>Email:</strong> <span>tasirmuhammad8@gmail.com
                 </div>
             </div>
 

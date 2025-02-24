@@ -48,9 +48,9 @@
               <div class="post-img position-relative overflow" style="margin: 10px;">
                 <div class="icon">
                   <div class="service-item row position">
-                    <img src="assets/uploads/fasilitas/<?= $j['gambar'] ?>" />
+                    <!-- <img src="assets/uploads/fasilitas/<?= $j['gambar'] ?>" />
                     <h3><?= $j['nama'] ?></h3>
-                    <p><?= $j['keterangan'] ?></p>
+                    <p><?= $j['keterangan'] ?></p> -->
                   </div>
                 </div>
               </div>
