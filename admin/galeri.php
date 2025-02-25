@@ -23,8 +23,8 @@
 
 						<form action="">
 							<div class="input-group">
-								<input type="text" name="key" placeholder="Pencarian">
-								<button type="submit"><i class="fa fa-search"></i></button>
+								<input type="text" name="key" placeholder="Pencarian" style="padding: 10px 40%;">
+								<button type="submit" style="font-size: 150%; margin: 3px;" ><i class="fa fa-search" ></i></button>
 							</div>
 						</form>
 
@@ -55,7 +55,7 @@
 
 								<tr>
 									<td><?= $no++ ?></td>
-									<td><img src="../uploads/galeri/<?= $p['foto'] ?>" width="100px"></td>
+									<td><img src="../assets/uploads/galeri/<?= $p['foto'] ?>" width="100px"></td>
 									<td><?= $p['keterangan'] ?></td>
 									<td>
 										<a href="edit-galeri.php?id=<?= $p['id'] ?>" title="Edit Data" class="text-orange"><i class="fa fa-edit"></i></a> 

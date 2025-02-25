@@ -61,7 +61,7 @@
 						echo '<div class="alert alert-error">Ukuran file tidak boleh lebih dari 1 MB.</div>';
 					} else {
 
-						move_uploaded_file($tmpname, "../uploads/fasilitas/" . $rename);
+						move_uploaded_file($tmpname, "./assets/uploads/fasilitas/" . $rename);
 
 						$simpan = mysqli_query($conn, "INSERT INTO fasilitas VALUES (
 											null,

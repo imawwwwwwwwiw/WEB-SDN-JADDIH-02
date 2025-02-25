@@ -1,6 +1,6 @@
-<?php 
-	session_start();
-	include 'koneksi.php';
+<?php
+session_start();
+include 'koneksi.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,8 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/admin.css">
 	</head>
 
+
 	<body>
-		
+
 		<!-- page login -->
 		<div class="page-login">
 
@@ -26,14 +27,14 @@
 				<div class="box-body">
 
 					<?php
-						if(isset($_GET['msg'])){
-							echo "<div class='alert alert-error'>".$_GET['msg']."</div>";
-						}
+					if (isset($_GET['msg'])) {
+						echo "<div class='alert alert-error'>" . $_GET['msg'] . "</div>";
+					}
 					?>
 
 					<!-- form login -->
 					<form action="" method="POST">
-						
+
 						<div class="form-group">
 							<label>Username</label>
 							<input type="text" name="user" placeholder="Username" class="input-control">
@@ -50,33 +51,30 @@
 
 					<?php
 
-						if(isset($_POST['submit'])){
+					if (isset($_POST['submit'])) {
 
-							$user = mysqli_real_escape_string($conn, $_POST['user']);
-							$pass = mysqli_real_escape_string($conn, $_POST['pass']);
+						$user = mysqli_real_escape_string($conn, $_POST['user']);
+						$pass = mysqli_real_escape_string($conn, $_POST['pass']);
 
-							$cek  = mysqli_query($conn, "SELECT * FROM pengguna WHERE username = '".$user."' ");
-							if(mysqli_num_rows($cek) > 0){
+						$cek  = mysqli_query($conn, "SELECT * FROM pengguna WHERE username = '" . $user . "' ");
+						if (mysqli_num_rows($cek) > 0) {
 
-								$d = mysqli_fetch_object($cek);
-								if(md5($pass) == $d->password){
+							$d = mysqli_fetch_object($cek);
+							if (md5($pass) == $d->password) {
 
-									$_SESSION['status_login']   = true;
-									$_SESSION['uid'] 			= $d->id;
-									$_SESSION['uname'] 			= $d->nama;
-									$_SESSION['ulevel'] 		= $d->level;
+								$_SESSION['status_login']   = true;
+								$_SESSION['uid'] 			= $d->id;
+								$_SESSION['uname'] 			= $d->nama;
+								$_SESSION['ulevel'] 		= $d->level;
 
-									echo "<script>window.location = 'admin/index.php'</script>";
-
-								}else{
-									echo '<div class="alert alert-error">Password salah</div>';
-								}
-
-							}else{
-								echo '<div class="alert alert-error">Username tidak ditemukan</div>';
+								echo "<script>window.location = 'admin/index.php'</script>";
+							} else {
+								echo '<div class="alert alert-error">Password salah</div>';
 							}
-
+						} else {
+							echo '<div class="alert alert-error">Username tidak ditemukan</div>';
 						}
+					}
 
 					?>
 
@@ -92,4 +90,5 @@
 		</div>
 
 	</body>
+
 </html>

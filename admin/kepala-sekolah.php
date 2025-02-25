@@ -76,13 +76,13 @@
 
 									}else{
 
-										if(file_exists("../uploads/identitas/".$_POST['foto_lama'])){
+										if(file_exists("../assets/uploads/identitas/".$_POST['foto_lama'])){
 
-											unlink("../uploads/identitas/".$_POST['foto_lama']);
+											unlink("../assets/uploads/identitas/".$_POST['foto_lama']);
 
 										}
 
-										move_uploaded_file($tmpname, "../uploads/identitas/".$rename);
+										move_uploaded_file($tmpname, "../assets/uploads/identitas/".$rename);
 
 									}
 

@@ -74,12 +74,12 @@ $p 			= mysqli_fetch_object($galeri);
 							return false;
 						} else {
 
-							if (file_exists("../uploads/galeri/" . $_POST['gambar2'])) {
+							if (file_exists("../assets/uploads/galeri/" . $_POST['gambar2'])) {
 
-								unlink("../uploads/galeri/" . $_POST['gambar2']);
+								unlink("../assets/uploads/galeri/" . $_POST['gambar2']);
 							}
 
-							move_uploaded_file($tmpname, "../uploads/galeri/" . $rename);
+							move_uploaded_file($tmpname, "../assets/uploads/galeri/" . $rename);
 						}
 					} else {
 

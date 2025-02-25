@@ -1,12 +1,13 @@
 <?php include 'header.php'; ?>
 <main class="main">
     <section id="portfolio-details" class="portfolio-details section">
+        <div class="section-title" data-aos="fade-up">
+            <h2>PPDB SDN Jaddih 02 Tahun 2025</h2>
+        </div>
         <div class="container" data-aos="fade-up">
-            <div class="row justify-content-between gy-40 mt-4">
+            <div class="row justify-content-between ">
                 <div class="col-lg-8" data-aos="fade-up">
                     <div class="portfolio-description">
-                        <h2>Penerimaan Peserta Didik Baru SDN Jaddih 02 Tahun 2025</h2>
-
                         <h3>Persyaratan PPDB SDN Jaddih 02</h3>
                         <p>
                             <i class="bi bi-caret-right-fill"></i>

@@ -2,21 +2,21 @@
 <main class="main">
     <section id="services" class="services section light-background">
         <div class="container section-title" data-aos="fade-up">
-            <h2>Prestasi</h2>
+            <h2>BERITA</h2>
             <div class="container">
                 <?php
-                $fasilitas = mysqli_query($conn, "SELECT * FROM fasilitas");
-                if (mysqli_num_rows($fasilitas) > 0) {
+                $prestasi = mysqli_query($conn, "SELECT * FROM prestasi");
+                if (mysqli_num_rows($prestasi) > 0) {
                 ?>
                     <div class="row">
-                        <?php while ($j = mysqli_fetch_array($fasilitas)) { ?>
+                        <?php while ($p = mysqli_fetch_array($prestasi)) { ?>
                             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                 <div class="post-img position-relative overflow" style="margin: 10px;">
                                     <div class="icon">
                                         <div class="service-item row position">
-                                            <img src="assets/uploads/fasilitas/<?= $j['gambar'] ?>" />
-                                            <h3><?= $j['nama'] ?></h3>
-                                            <p><?= $j['keterangan'] ?></p>
+                                            <img src="assets/uploads/prestasi/<?= $p['gambar'] ?>" />
+                                            <h4><?= $p['juara'] ?></h4>
+                                            <p><?= $p['lomba'] ?></p>
                                         </div>
                                     </div>
                                 </div>

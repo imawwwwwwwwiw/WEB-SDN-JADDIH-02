@@ -82,13 +82,13 @@
 
 									}else{
 
-										if(file_exists("../uploads/informasi/".$_POST['gambar2'])){
+										if(file_exists("../assets/uploads/informasi/".$_POST['gambar2'])){
 
-											unlink("../uploads/informasi/".$_POST['gambar2']);
+											unlink("../assets/uploads/informasi/".$_POST['gambar2']);
 
 										}
 
-										move_uploaded_file($tmpname, "../uploads/informasi/".$rename);
+										move_uploaded_file($tmpname, "../assets/uploads/informasi/".$rename);
 
 									}
 

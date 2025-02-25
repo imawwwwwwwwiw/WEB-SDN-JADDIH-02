@@ -57,7 +57,7 @@
 
 								}else{
 
-									move_uploaded_file($tmpname, "../uploads/galeri/".$rename);
+									move_uploaded_file($tmpname, "../assets/uploads/galeri/".$rename);
 
 									$simpan = mysqli_query($conn, "INSERT INTO galeri VALUES (
 											null,
