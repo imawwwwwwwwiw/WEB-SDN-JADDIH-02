@@ -11,20 +11,19 @@
                         <h3>Persyaratan PPDB SDN Jaddih 02</h3>
                         <p>
                             <i class="bi bi-caret-right-fill"></i>
-                            <span>Akta kelahiran atau surat keterangan lahir.</span>
+                            <span>Fotocopy Kartu keluarga.</span>
                         </p>
                         <p>
                             <i class="bi bi-caret-right-fill"></i>
-                            <span>Kartu keluarga (KK).</span>
+                            <span>Fotocopy Akta kelahiran.</span>
                         </p>
-
                         <p>
-                            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos
-                            itaque inventore commodi labore quia quia. Exercitationem
-                            repudiandae officiis neque suscipit non officia eaque itaque
-                            enim. Voluptatem officia accusantium nesciunt est omnis
-                            tempora consectetur dignissimos. Sequi nulla at esse enim cum
-                            deserunt eius.
+                            <i class="bi bi-caret-right-fill"></i>
+                            <span>Fotocopy KTP bapak atau ibu.</span>
+                        </p>
+                        <p>
+                            <i class="bi bi-caret-right-fill"></i>
+                            <span>Fotocopy ijazah TK (jika ada).</span>
                         </p>
                     </div>
                 </div>
