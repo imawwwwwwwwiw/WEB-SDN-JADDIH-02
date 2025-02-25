@@ -18,7 +18,7 @@
 				<div class="box">
 
 					<div class="box-header">
-						Edit Informasi
+						Edit informasi
 					</div>
 
 					<div class="box-body">

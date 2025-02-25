@@ -23,8 +23,8 @@
 
 				<form action="">
 					<div class="input-group">
-						<input type="text" name="key" placeholder="Pencarian">
-						<button type="submit"><i class="fa fa-search"></i></button>
+						<input type="text" name="key" placeholder="Pencarian" style="padding: 10px 40%;">
+						<button type="submit" style="font-size: 150%; justify-content: center;" ><i class="fa fa-search" ></i></button>
 					</div>
 				</form>
 

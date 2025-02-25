@@ -8,7 +8,7 @@
 				<div class="box">
 
 					<div class="box-header">
-						Informasi
+						informasi
 					</div>
 
 					<div class="box-body">
@@ -23,7 +23,7 @@
 
 						<form action="">
 							<div class="input-group">
-								<input type="text" name="key" placeholder="Pencarian">
+								<input type="text" name="key" placeholder="Pencarian" style="padding: 20px;">
 								<button type="submit"><i class="fa fa-search"></i></button>
 							</div>
 						</form>

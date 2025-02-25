@@ -36,7 +36,7 @@
 </main>
 <section id="services" class="services section light-background">
   <div class="container section-title" data-aos="fade-up">
-    <h2>Berita Terbaru</h2>
+    <h2>informasi Terbaru</h2>
     <div class="container">
       <?php
       $fasilitas = mysqli_query($conn, "SELECT * FROM fasilitas");
