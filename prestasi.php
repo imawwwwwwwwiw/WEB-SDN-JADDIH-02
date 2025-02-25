@@ -14,7 +14,7 @@
                                 <div class="post-img position-relative overflow" style="margin: 10px;">
                                     <div class="icon">
                                         <div class="service-item row position">
-                                            <img src="assets/uploads/prestasi/<?= $p['gambar'] ?>" />
+                                            <img src="./assets/uploads/prestasi/<?= $p['gambar'] ?>" />
                                             <h4><?= $p['juara'] ?></h4>
                                             <p><?= $p['lomba'] ?></p>
                                         </div>

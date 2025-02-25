@@ -13,12 +13,12 @@
               class="col-lg-4 col-md-6 portfolio-item isotope-item ">
               <div class="service-item row position">
                 <img
-                  src="assets/uploads/galeri/<?= $p['foto'] ?>" />
+                  src="./assets/uploads/galeri/<?= $p['foto'] ?>" />
               </div>
               <div class="portfolio-info">
                 <p><?= $p['keterangan'] ?></p>
                 <a
-                  href="assets/uploads/galeri/<?= $p['foto'] ?>"
+                  href="./assets/uploads/galeri/<?= $p['foto'] ?>"
                   title="<p><?= $p['keterangan'] ?></p>"
                   data-gallery="portfolio-gallery-product"
                   class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
