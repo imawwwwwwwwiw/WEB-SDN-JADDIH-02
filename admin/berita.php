@@ -8,7 +8,7 @@
 				<div class="box">
 
 					<div class="box-header">
-						Informasi
+						informasi
 					</div>
 
 					<div class="box-body">
@@ -23,7 +23,7 @@
 
 						<form action="">
 							<div class="input-group">
-								<input type="text" name="key" placeholder="Pencarian">
+								<input type="text" name="key" placeholder="Pencarian" style="padding: 10px 40%; ">
 								<button type="submit"><i class="fa fa-search"></i></button>
 							</div>
 						</form>
@@ -58,7 +58,7 @@
 									<td><?= $no++ ?></td>
 									<td><?= $p['judul'] ?></td>
 									<td><?= substr($p['keterangan'], 0, 100) ?></td>
-									<td><img src="../uploads/informasi/<?= $p['gambar'] ?>" width="100px"></td>
+									<td><img src="../assets/uploads/informasi/<?= $p['gambar'] ?>" width="100px"></td>
 									<td>
 										<a href="edit-informasi.php?id=<?= $p['id'] ?>" title="Edit Data" class="text-orange"><i class="fa fa-edit"></i></a> 
 										<a href="hapus.php?idinformasi=<?= $p['id'] ?>" onclick="return confirm('Yakin ingin hapus ?')" title="Hapus Data" class="text-red"><i class="fa fa-times"></i></a>

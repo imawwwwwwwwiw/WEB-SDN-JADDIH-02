@@ -8,7 +8,7 @@
 				<div class="box">
 
 					<div class="box-header">
-						Tambah Informasi
+						Tambah informasi
 					</div>
 
 					<div class="box-body">
@@ -63,7 +63,7 @@
 
 								}else{
 
-									move_uploaded_file($tmpname, "../uploads/informasi/".$rename);
+									move_uploaded_file($tmpname, "../assets/uploads/informasi/".$rename);
 
 									$simpan = mysqli_query($conn, "INSERT INTO informasi VALUES (
 											null,

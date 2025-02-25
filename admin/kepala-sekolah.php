@@ -28,12 +28,12 @@
 
 							<div class="form-group">
 								<label>Sambutan</label>
-								<textarea name="sambutan" class="input-control" placeholder="Sambutan Kepala Sekolah" id="keterangan"><?= $d->sambutan_kepsek ?></textarea>
+								<textarea name="keterangan" class="input-control" placeholder="Keterangan"><?= $d->sambutan_kepsek ?></textarea>
 							</div>
 
 							<div class="form-group">
 								<label>Foto</label>
-								<img src="../uploads/identitas/<?= $d->foto_kepsek ?>" width="200px" class="image">
+								<img src="../assets/uploads/identitas/<?= $d->foto_kepsek ?>" width="200px" class="image">
 								<input type="hidden" name="foto_lama" value="<?= $d->foto_kepsek ?>">
 								<input type="file" name="foto_baru" class="input-control">
 							</div>
@@ -76,13 +76,13 @@
 
 									}else{
 
-										if(file_exists("../uploads/identitas/".$_POST['foto_lama'])){
+										if(file_exists("../assets/uploads/identitas/".$_POST['foto_lama'])){
 
-											unlink("../uploads/identitas/".$_POST['foto_lama']);
+											unlink("../assets/uploads/identitas/".$_POST['foto_lama']);
 
 										}
 
-										move_uploaded_file($tmpname, "../uploads/identitas/".$rename);
+										move_uploaded_file($tmpname, "../assets/uploads/identitas/".$rename);
 
 									}
 

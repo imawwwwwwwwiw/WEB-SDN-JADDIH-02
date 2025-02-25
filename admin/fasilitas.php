@@ -23,8 +23,8 @@
 
 				<form action="">
 					<div class="input-group">
-						<input type="text" name="key" placeholder="Pencarian">
-						<button type="submit"><i class="fa fa-search"></i></button>
+						<input type="text" name="key" placeholder="Pencarian" style="padding: 10px 40%;">
+						<button type="submit" style="font-size: 150%; margin: 3px;" ><i class="fa fa-search" ></i></button>
 					</div>
 				</form>
 
@@ -58,7 +58,7 @@
 									<td><?= $no++ ?></td>
 									<td><?= $p['nama'] ?></td>
 									<td><?= $p['keterangan'] ?></td>
-									<td><img src="../uploads/fasilitas/<?= $p['gambar'] ?>" width="100px"></td>
+									<td><img src="../assets/uploads/fasilitas/<?= $p['gambar'] ?>" width="100px"></td>
 									<td>
 										<a href="edit-fasilitas.php?id=<?= $p['id'] ?>" title="Edit Data" class="text-orange"><i class="fa fa-edit"></i></a>
 										<a href="hapus.php?idfasilitas=<?= $p['id'] ?>" onclick="return confirm('Yakin ingin hapus ?')" title="Hapus Data" class="text-red"><i class="fa fa-times"></i></a>

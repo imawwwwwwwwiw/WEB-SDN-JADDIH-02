@@ -22,7 +22,7 @@
       <div class="container">
         <div class="row position-relative">
           <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/uploads/identitas/<?= $d->foto_kepsek ?>" />
+            <img src="./assets/uploads/identitas/<?= $d->foto_kepsek ?>" />
           </div>
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
             <div class="our-story">
@@ -36,7 +36,7 @@
 </main>
 <section id="services" class="services section light-background">
   <div class="container section-title" data-aos="fade-up">
-    <h2>Berita Terbaru</h2>
+    <h2>informasi Terbaru</h2>
     <div class="container">
       <?php
       $fasilitas = mysqli_query($conn, "SELECT * FROM fasilitas");

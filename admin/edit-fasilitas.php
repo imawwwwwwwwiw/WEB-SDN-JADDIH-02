@@ -80,12 +80,12 @@ $p 			= mysqli_fetch_object($fasilitas);
 							return false;
 						} else {
 
-							if (file_exists("../uploads/fasilitas/" . $_POST['gambar2'])) {
+							if (file_exists("../assets/uploads/fasilitas/" . $_POST['gambar2'])) {
 
-								unlink("../uploads/fasilitas/" . $_POST['gambar2']);
+								unlink("../assets/uploads/fasilitas/" . $_POST['gambar2']);
 							}
 
-							move_uploaded_file($tmpname, "../uploads/fasilitas/" . $rename);
+							move_uploaded_file($tmpname, "../assets/uploads/fasilitas/" . $rename);
 						}
 					} else {
 
