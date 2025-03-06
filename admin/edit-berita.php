@@ -1,13 +1,13 @@
 <?php include 'header.php' ?>
 
 <?php
-	$informasi 	= mysqli_query($conn, "SELECT * FROM informasi WHERE id = '".$_GET['id']."' ");
+	$prestasi 	= mysqli_query($conn, "SELECT * FROM prestasi WHERE id = '".$_GET['id']."' ");
 
-	if(mysqli_num_rows($informasi) == 0){
-		echo "<script>window.location='informasi.php'</script>";
+	if(mysqli_num_rows($prestasi) == 0){
+		echo "<script>window.location='berita.php'</script>";
 	}
 
-	$p 			= mysqli_fetch_object($informasi);
+	$p 			= mysqli_fetch_object($prestasi);
 ?>
 
 		<!-- content -->
@@ -18,7 +18,7 @@
 				<div class="box">
 
 					<div class="box-header">
-						Edit informasi
+						Edit berita
 					</div>
 
 					<div class="box-body">
@@ -27,22 +27,22 @@
 							
 							<div class="form-group">
 								<label>Judul</label>
-								<input type="text" name="judul" placeholder="Judul" value="<?= $p->judul ?>" class="input-control" required>
+								<input type="text" name="judul" placeholder="Judul" value="<?= $p->juara ?>" class="input-control" required>
 							</div>
 
 							<div class="form-group">
-								<label>Keterangan</label>
-								<textarea name="keterangan" class="input-control" placeholder="Keterangan" id="keterangan"><?= $p->keterangan ?></textarea>
+							<label>Keterangan Lomba</label>
+							<textarea name="keterangan lomba" class="input-control" placeholder="Keterangan lomba"><?= $p->keterangan ?></textarea>
 							</div>
 
 							<div class="form-group">
 								<label>Gambar</label>
-								<img src="../uploads/informasi/<?= $p->gambar ?>" width="200px" class="image">
+								<img src="../assets/uploads/prestasi/<?= $p->gambar ?>" width="200px" class="image">
 								<input type="hidden" name="gambar2" value="<?= $p->gambar ?>">
 								<input type="file" name="gambar" class="input-control">
 							</div>
 
-							<button type="button" class="btn" onclick="window.location = 'informasi.php'">Kembali</button>
+							<button type="button" class="btn" onclick="window.location = 'berita.php'">Kembali</button>
 							<input type="submit" name="submit" value="Simpan" class="btn btn-blue">
 
 						</form>
@@ -51,7 +51,7 @@
 
 							if(isset($_POST['submit'])){
 
-								$judul 	= addslashes(ucwords($_POST['judul']));
+								$juara 	= addslashes(ucwords($_POST['juara']));
 								$ket 	= addslashes($_POST['keterangan']);
 								$currdate = date('Y-m-d H:i:s');
 
@@ -82,13 +82,13 @@
 
 									}else{
 
-										if(file_exists("../assets/uploads/informasi/".$_POST['gambar2'])){
+										if(file_exists("../assets/uploads/prestasi/".$_POST['gambar'])){
 
-											unlink("../assets/uploads/informasi/".$_POST['gambar2']);
+											unlink("../assets/uploads/prestasi/".$_POST['gambar']);
 
 										}
 
-										move_uploaded_file($tmpname, "../assets/uploads/informasi/".$rename);
+										move_uploaded_file($tmpname, "../assets/uploads/prestasi/".$rename);
 
 									}
 
@@ -100,8 +100,8 @@
 
 								}
 
-								$update = mysqli_query($conn, "UPDATE informasi SET
-										judul = '".$judul."',
+								$update = mysqli_query($conn, "UPDATE prestasi SET
+										juara = '".$juara."',
 										keterangan = '".$ket."',
 										gambar = '".$rename."',
 										updated_at = '".$currdate."'
@@ -110,7 +110,7 @@
 
 
 								if($update){
-									echo "<script>window.location='informasi.php?success=Edit Data Berhasil'</script>";
+									echo "<script>window.location='berita.php?success=Edit Data Berhasil'</script>";
 								}else{
 									echo 'gagal edit '.mysqli_error($conn);
 								}

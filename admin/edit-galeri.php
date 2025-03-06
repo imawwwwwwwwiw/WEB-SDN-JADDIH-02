@@ -32,7 +32,7 @@ $p 			= mysqli_fetch_object($galeri);
 
 					<div class="form-group">
 						<label>Gambar</label>
-						<img src=".../uploads/galeri/<?= $p->foto ?>" width="200px" class="image">
+						<img src="../assets/uploads/galeri/<?= $p->foto ?>" width="200px" class="image">
 						<input type="hidden" name="gambar2" value="<?= $p->foto ?>">
 						<input type="file" name="gambar" class="input-control">
 					</div>

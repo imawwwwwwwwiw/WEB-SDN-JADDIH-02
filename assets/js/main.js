@@ -185,4 +185,8 @@
   }
 
   window.addEventListener("load", initSwiper);
+
+  document.querySelector(".nav-toggle").addEventListener("click", function () {
+    document.querySelector(".nav-menu").classList.toggle("show");
+  });
 })();
