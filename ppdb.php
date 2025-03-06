@@ -7,7 +7,7 @@
         <div class="container" data-aos="fade-up">
             <div class="row justify-content-between ">
                 <div class="col-lg-8" data-aos="fade-up">
-                    <div class="portfolio-description">
+                    <div class="portfolio-info">
                         <h3>Persyaratan PPDB SDN Jaddih 02</h3>
                         <p>
                             <i class="bi bi-caret-right-fill"></i>

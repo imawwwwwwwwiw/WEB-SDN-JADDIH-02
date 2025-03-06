@@ -6,7 +6,7 @@
       <div class="container">
         <div class="row position-relative">
           <div class="testimonial-item">
-            <img src="assets/uploads/struktur.jpg" width="1040" />
+            <img src="assets/uploads/struktur.jpg" class="img-fluid" alt="Struktur" />
           </div>
         </div>
       </div>

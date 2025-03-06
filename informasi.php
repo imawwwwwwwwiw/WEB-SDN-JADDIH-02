@@ -7,7 +7,7 @@
       <div class="container">
 
         <a href="ppdb.php" class="btn btn-outline-primary">PPDB</a>
-        <a href="prestasi.php" class="btn btn-outline-primary">BERITA</a>
+        <a href="berita.php" class="btn btn-outline-primary">BERITA</a>
 
       </div>
     </div>

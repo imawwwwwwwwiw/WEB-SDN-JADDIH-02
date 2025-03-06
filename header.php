@@ -36,7 +36,6 @@ $d = mysqli_fetch_object($identitas);
 	<link
 		href="assets/vendor/glightbox/css/glightbox.min.css"
 		rel="stylesheet" />
-	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
 	<link href="assets/css/main.css" rel="stylesheet" />
 </head>
@@ -57,7 +56,7 @@ $d = mysqli_fetch_object($identitas);
 					<li class="dropdown"><a href="informasi.php"><span>Informasi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 						<ul>
 							<li><a href="ppdb.php">PPDB</a></li>
-							<li><a href="prestasi.php">BERITA</a></li>
+							<li><a href="berita.php">BERITA</a></li>
 						</ul>
 					<li><a href="galeri.php">Galeri</a></li>
 					<li><a href="kontak.php">Kontak</a></li>
