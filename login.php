@@ -7,8 +7,25 @@ include 'koneksi.php';
 	<head>
 		<title>Halaman Login</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/admin.css">
+		<style>
+			.show-password {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				margin-top: 5px;
+			}
+		</style>
+		<script>
+			function togglePassword() {
+				var passwordField = document.getElementById("password");
+				if (passwordField.type === "password") {
+					passwordField.type = "text";
+				} else {
+					passwordField.type = "password";
+				}
+			}
+		</script>
 	</head>
-
 
 	<body>
 
@@ -42,7 +59,10 @@ include 'koneksi.php';
 
 						<div class="form-group">
 							<label>Password</label>
-							<input type="password" name="pass" placeholder="Password" class="input-control">
+							<input type="password" id="password" name="pass" placeholder="Password" class="input-control">
+							<div class="show-password">
+								<input type="checkbox" onclick="togglePassword()"> <span>Tampilkan Password</span>
+							</div>
 						</div>
 
 						<input type="submit" name="submit" value="Login" class="btn">
@@ -50,9 +70,7 @@ include 'koneksi.php';
 					</form>
 
 					<?php
-
 					if (isset($_POST['submit'])) {
-
 						$user = mysqli_real_escape_string($conn, $_POST['user']);
 						$pass = mysqli_real_escape_string($conn, $_POST['pass']);
 
@@ -75,7 +93,6 @@ include 'koneksi.php';
 							echo '<div class="alert alert-error">Username tidak ditemukan</div>';
 						}
 					}
-
 					?>
 
 				</div>
@@ -90,5 +107,4 @@ include 'koneksi.php';
 		</div>
 
 	</body>
-
 </html>
