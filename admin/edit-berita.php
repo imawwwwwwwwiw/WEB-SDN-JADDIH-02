@@ -32,7 +32,7 @@
 
 							<div class="form-group">
 							<label>Keterangan Lomba</label>
-							<textarea name="keterangan lomba" class="input-control" placeholder="Keterangan lomba"><?= $p->lomba ?></textarea>
+							<textarea name="keterangan lomba" class="input-control" placeholder="Keterangan lomba"><?= $p->keterangan ?></textarea>
 							</div>
 
 							<div class="form-group">
@@ -42,7 +42,7 @@
 								<input type="file" name="gambar" class="input-control">
 							</div>
 
-							<button type="button" class="btn" onclick="window.location = 'informasi.php'">Kembali</button>
+							<button type="button" class="btn" onclick="window.location = 'berita.php'">Kembali</button>
 							<input type="submit" name="submit" value="Simpan" class="btn btn-blue">
 
 						</form>
@@ -51,7 +51,7 @@
 
 							if(isset($_POST['submit'])){
 
-								$judul 	= addslashes(ucwords($_POST['judul']));
+								$juara 	= addslashes(ucwords($_POST['juara']));
 								$ket 	= addslashes($_POST['keterangan']);
 								$currdate = date('Y-m-d H:i:s');
 
@@ -101,7 +101,7 @@
 								}
 
 								$update = mysqli_query($conn, "UPDATE prestasi SET
-										judul = '".$judul."',
+										juara = '".$juara."',
 										keterangan = '".$ket."',
 										gambar = '".$rename."',
 										updated_at = '".$currdate."'

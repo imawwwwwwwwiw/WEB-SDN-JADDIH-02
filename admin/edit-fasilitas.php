@@ -18,7 +18,7 @@ $p 			= mysqli_fetch_object($fasilitas);
 		<div class="box">
 
 			<div class="box-header">
-				Edit fasilitas
+				Edit Fasilitas
 			</div>
 
 			<div class="box-body">
@@ -37,7 +37,7 @@ $p 			= mysqli_fetch_object($fasilitas);
 
 					<div class="form-group">
 						<label>Gambar</label>
-						<img src="../uploads/fasilitas/<?= $p->gambar ?>" width="200px" class="image">
+						<img src="../assets/uploads/fasilitas/<?= $p->gambar ?>" width="200px" class="image">
 						<input type="hidden" name="gambar2" value="<?= $p->gambar ?>">
 						<input type="file" name="gambar" class="input-control">
 					</div>

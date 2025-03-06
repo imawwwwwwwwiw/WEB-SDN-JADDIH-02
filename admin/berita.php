@@ -34,7 +34,7 @@
 								<tr>
 									<th>No</th>
 									<th>Judul</th>
-									<th>Lomba</th>
+									<th>Keterangan</th>
 									<th>Gambar</th>
 									<th>Aksi</th>
 								</tr>
@@ -51,17 +51,17 @@
 
 									$prestasi = mysqli_query($conn, "SELECT * FROM prestasi $where ORDER BY id DESC");
 									if(mysqli_num_rows($prestasi) > 0){
-										while($p = mysqli_fetch_array($prestasi)){
+										while($b = mysqli_fetch_array($prestasi)){
 								?>
 
 								<tr>
 									<td><?= $no++ ?></td>
-									<td><?= $p['juara'] ?></td>
-									<td><?= $p['lomba'] ?></td>
-									<td><img src="../assets/uploads/prestasi/<?= $p['gambar'] ?>" width="100px"></td>
+									<td><?= $b['juara'] ?></td>
+									<td><?= $b['keterangan'] ?></td>
+									<td><img src="../assets/uploads/prestasi/<?= $b['gambar'] ?>" width="100px"></td>
 									<td>
-										<a href="edit-berita.php?id=<?= $p['id'] ?>" title="Edit Data" class="text-orange"><i class="fa fa-edit"></i></a> 
-										<a href="hapus.php?idinformasi=<?= $p['id'] ?>" onclick="return confirm('Yakin ingin hapus ?')" title="Hapus Data" class="text-red"><i class="fa fa-times"></i></a>
+										<a href="edit-berita.php?id=<?= $b['id'] ?>" title="Edit Data" class="text-orange"><i class="fa fa-edit"></i></a> 
+										<a href="hapus.php?idprestasi=<?= $b['id'] ?>" onclick="return confirm('Yakin ingin hapus ?')" title="Hapus Data" class="text-red"><i class="fa fa-times"></i></a>
 									</td>
 								</tr>
 
