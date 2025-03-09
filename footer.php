@@ -5,42 +5,76 @@
                 <a href="index.html" class="logo d-flex align-items-center">
                     <span class="sitename">kontak 1</span>
                 </a>
-                <div class="footer-contact pt-3">
-                    <p>Nur Hasanah</p>
-                    <p>Jl Kardu Dsn Jaddih Utara II</p>
-                    <p class="mt-3">
-                        <strong>Phone:</strong> <span>+62 822-4453-0114</span>
-                    </p>
-                    <p><strong>Email:</strong> <span>nurhasanahjaddih2@gmail.com</span></p>
-                </div>
+                <?php
+                $kontak_1 = mysqli_query($conn, "SELECT * FROM kontak_1");
+                if (mysqli_num_rows($kontak_1) > 0) {
+                    while ($k1 = mysqli_fetch_array($kontak_1)) {
+                ?>
+                        <div class="footer-contact pt-3">
+                            <p><?= $k1['nama'] ?></p>
+                            <p><?= $k1['alamat'] ?></p>
+                            <p class="mt-3">
+                                <strong>Telepon:</strong>
+                                <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $k1['nomor']) ?>" target="_blank"><?= $k1['nomor'] ?></a>
+                            </p>
+                        </div>
+                    <?php }
+                } else { ?>
+
+                    Tidak ada data
+
+                <?php } ?>
             </div>
 
             <div class="col-lg-4 footer-about">
                 <a href="index.html" class="logo d-flex align-items-center">
                     <span class="sitename">kontak 2</span>
                 </a>
-                <div class="footer-contact pt-3">
-                    <p>Moh Tasir</p>
-                    <p>Jl Kardu Dsn Jaddih Utara II</p>
-                    <p class="mt-3">
-                        <strong>Phone:</strong> <span>+62 857-3128-3939</span>
-                    </p>
-                    <p><strong>Email:</strong> <span>tasirmuhammad8@gmail.com
-                </div>
+                <?php
+                $kontak_2 = mysqli_query($conn, "SELECT * FROM kontak_2");
+                if (mysqli_num_rows($kontak_2) > 0) {
+                    while ($k2 = mysqli_fetch_array($kontak_2)) {
+                ?>
+                        <div class="footer-contact pt-3">
+                            <p><?= $k2['nama'] ?></p>
+                            <p><?= $k2['alamat'] ?></p>
+                            <p class="mt-3">
+                                <strong>Telepon:</strong>
+                                <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $k2['nomor']) ?>" target="_blank"><?= $k2['nomor'] ?></a>
+                            </p>
+                        </div>
+                    <?php }
+                } else { ?>
+
+                    Tidak ada data
+
+                <?php } ?>
             </div>
 
             <div class="col-lg-4 col-md-6 footer-about">
                 <a href="index.html" class="logo d-flex align-items-center">
                     <span class="sitename">kontak 3</span>
                 </a>
-                <div class="footer-contact pt-3">
-                    <p>Nur Hidayati</p>
-                    <p>Jl Sidingkap</p>
-                    <p class="mt-3">
-                        <strong>Phone:</strong> <span>+62 813-3291-3131</span>
-                    </p>
-                    <p><strong>Email:</strong> <span>info@example.com</span></p>
-                </div>
+                <?php
+                $kontak_3 = mysqli_query($conn, "SELECT * FROM kontak_3");
+                if (mysqli_num_rows($kontak_3) > 0) {
+                    while ($k3 = mysqli_fetch_array($kontak_3)) {
+                ?>
+                        <div class="footer-contact pt-3">
+                            <p><?= $k3['nama'] ?></p>
+                            <p><?= $k3['alamat'] ?></p>
+                            <p class="mt-3">
+                                <strong>Telepon:</strong>
+                                <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $k3['nomor']) ?>" target="_blank"><?= $k3['nomor'] ?></a>
+                            </p>
+
+                        </div>
+                    <?php }
+                } else { ?>
+
+                    Tidak ada data
+
+                <?php } ?>
             </div>
         </div>
 
@@ -52,8 +86,8 @@
             </p>
             <div class="credits">
                 Designed by
-                <a href="">Karimah</a> and
-                <a href="">Aulia Azzahra
+                <a href="https://www.instagram.com/imaaaaaaaaaha/">Karimah</a> and
+                <a href="https://www.instagram.com/itz.auliaz">Aulia Azzahra</a>
             </div>
         </div>
 </footer>
