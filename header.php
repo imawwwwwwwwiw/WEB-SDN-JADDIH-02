@@ -37,7 +37,7 @@ $d = mysqli_fetch_object($identitas);
 		href="assets/vendor/glightbox/css/glightbox.min.css"
 		rel="stylesheet" />
 
-	<link href="assets/css/main.css" rel="stylesheet" />
+	<link href="main.css" rel="stylesheet" />
 </head>
 
 <body class="index-page">

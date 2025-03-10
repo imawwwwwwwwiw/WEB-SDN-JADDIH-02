@@ -15,7 +15,7 @@ $d = mysqli_fetch_object($identitas);
 <head>
 	<link rel="icon" href="../assets/uploads/identitas/<?= $d->logo_sekolah ?>">
 	<title>Panel Admin - <?= $d->nama ?></title>
-	<link rel="stylesheet" type="text/css" href="../assets/css/admin.css">
+	<link rel="stylesheet" type="text/css" href="admin.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 	<script>

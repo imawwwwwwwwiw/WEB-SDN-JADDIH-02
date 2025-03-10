@@ -32,13 +32,13 @@ $p 			= mysqli_fetch_object($ppdb);
 
 					<div class="form-group">
 						<label>Lokasi</label>
-						<textarea name="Lokasi" class="input-control" placeholder="Lokasi"><?= $p->lokasi ?></textarea>
+						<textarea name="lokasi" class="input-control" placeholder="Lokasi"><?= $p->lokasi ?></textarea>
 					</div>
 
 					<div class="form-group">
 						<label>Jadwal Masuk</label>
 						<input type="text" name="jadwal" placeholder="Jadwal" value="<?= $p->jadwal_masuk ?>" class="input-control" required>
-                        
+
 					</div>
 
 					<button type="button" class="btn" onclick="window.location = 'fasilitas.php'">Kembali</button>
@@ -52,10 +52,10 @@ $p 			= mysqli_fetch_object($ppdb);
 
 					$tanggal	= addslashes(ucwords($_POST['tanggal']));
 					$lokasi = isset($_POST["lokasi"]) ? $_POST["lokasi"] : '';
-                    $jadwal_masuk	= addslashes(ucwords($_POST['jadwal']));
+					$jadwal_masuk	= addslashes(ucwords($_POST['jadwal']));
 					$currdate = date('Y-m-d H:i:s');
 
-					
+
 
 					$update = mysqli_query($conn, "UPDATE ppdb SET
 										tanggal = '" . $tanggal . "',
