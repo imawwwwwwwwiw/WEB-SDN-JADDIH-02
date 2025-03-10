@@ -33,7 +33,7 @@ $d = mysqli_fetch_object($identitas);
 		<div class="container" style=" justify-content: space-between;">
 
 			<!-- navbar brand -->
-			<div class="nav-brand float-left" style="display: flex; align-items: center; ">
+			<div class="nav-brand float-left" style="display: flex; align-items: center;">
 				<img src="../assets/uploads/identitas/<?= $d->logo_sekolah ?>" width="40" style="margin-right: 5px; " />
 				<h2>
 					<a href="index.php"><?= $d->nama ?></a>
@@ -41,7 +41,7 @@ $d = mysqli_fetch_object($identitas);
 			</div>
 
 			<!-- navbar menu -->
-			<ul class="nav-menu float-right">
+			<ul class="nav-menu float-right" style=" padding: 0px 3px; font-size: 14px; font-weight: bold;">
 				<li><a href="index.php">DASHBOARD</a></li>
 
 				<?php if ($_SESSION['ulevel'] == 'Super Admin') { ?>

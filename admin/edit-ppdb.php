@@ -32,7 +32,7 @@ $p 			= mysqli_fetch_object($ppdb);
 
 					<div class="form-group">
 						<label>Lokasi</label>
-						<textarea name="lokasi" class="input-control" placeholder="Lokasi"><?= $p->lokasi ?></textarea>
+						<input type="text" name="lokasi" placeholder="Lokasi" value="<?= $p->lokasi ?>" class="input-control" required>
 					</div>
 
 					<div class="form-group">

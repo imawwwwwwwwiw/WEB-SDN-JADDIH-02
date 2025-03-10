@@ -20,12 +20,12 @@
 							}
 						?>
 
-						<form action="">
+						<!-- <form action="">
 							<div class="input-group">
 								<input type="text" name="key" placeholder="Pencarian" style="padding: 10px 40%;">
 								<button type="submit" style="font-size: 150%; margin: 3px;" ><i class="fa fa-search" ></i></button>
 							</div>
-						</form>
+						</form> -->
 
 
 						<table class="table">
