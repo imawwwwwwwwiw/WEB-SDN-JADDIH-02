@@ -8,7 +8,7 @@
       data-bs-ride="carousel"
       data-bs-interval="5000">
       <div class="carousel-item active">
-        <img src="assets/uploads/identitas/<?= $d->background ?>" class="img-fluid" />
+        <img src="assets/uploads/identitas/<?= $d->background ?>" />
         <div class="container">
           <h2>SELAMAT DATANG DI SD NEGERI JADDIH 02</h2>
           <p>SD Negeri Jaddih 2 merupakan salah satu sekolah jenjang SD berstatus Negeri yang didirikan pada tanggal 1 Januari 1962.</p>
@@ -34,32 +34,5 @@
       </div>
     </div>
   </section>
-</main>
-<!-- <section id="services" class="services section light-background">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>informasi Terbaru</h2>
-    <div class="container">
-      <?php
-      $fasilitas = mysqli_query($conn, "SELECT * FROM fasilitas");
-      if (mysqli_num_rows($fasilitas) > 0) {
-      ?>
-        <div class="row">
-          <?php while ($j = mysqli_fetch_array($fasilitas)) { ?>
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="post-img position-relative overflow" style="margin: 10px;">
-                <div class="icon">
-                  <div class="service-item row position">
-                     <img src="assets/uploads/fasilitas/<?= $j['gambar'] ?>" />
-                    <h3><?= $j['nama'] ?></h3>
-                    <p><?= $j['keterangan'] ?></p> 
-                  </div>
-                </div>
-              </div>
-            </div>
-          <?php }
-        } else { ?>
-          Tidak ada data
-        <?php } ?>
-</section> -->
 </main>
 <?php include 'footer.php'; ?>
