@@ -31,7 +31,7 @@
 
 				$where = " WHERE 1=1 ";
 				if (isset($_GET['key'])) {
-					$where .= " AND judul LIKE '%" . addslashes($_GET['key']) . "%' ";
+					$where .= " AND juara LIKE '%" . addslashes($_GET['key']) . "%' ";
 				}
 
 				// Ambil total data
@@ -47,7 +47,7 @@
 					<thead>
 						<tr>
 							<th>No</th>
-							<th>Judul</th>
+							<th>Juara</th>
 							<th>Keterangan</th>
 							<th>Gambar</th>
 							<th>Aksi</th>

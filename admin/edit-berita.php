@@ -1,130 +1,123 @@
 <?php include 'header.php' ?>
 
 <?php
-	$prestasi 	= mysqli_query($conn, "SELECT * FROM prestasi WHERE id = '".$_GET['id']."' ");
+$prestasi 	= mysqli_query($conn, "SELECT * FROM prestasi WHERE id = '" . $_GET['id'] . "' ");
 
-	if(mysqli_num_rows($prestasi) == 0){
-		echo "<script>window.location='berita.php'</script>";
-	}
+if (mysqli_num_rows($prestasi) == 0) {
+	echo "<script>window.location='berita.php'</script>";
+}
 
-	$p 			= mysqli_fetch_object($prestasi);
+$p 			= mysqli_fetch_object($prestasi);
 ?>
 
-		<!-- content -->
-		<div class="content">
+<!-- content -->
+<div class="content">
 
-			<div class="container">
+	<div class="container">
 
-				<div class="box">
+		<div class="box">
 
-					<div class="box-header">
-						Edit berita
+			<div class="box-header">
+				Edit berita
+			</div>
+
+			<div class="box-body">
+
+				<form action="" method="POST" enctype="multipart/form-data">
+
+					<div class="form-group">
+						<label>Juara</label>
+						<input type="text" name="juara" placeholder="Judul" value="<?= $p->juara ?>" class="input-control" required>
 					</div>
 
-					<div class="box-body">
-						
-						<form action="" method="POST" enctype="multipart/form-data">
-							
-							<div class="form-group">
-								<label>Judul</label>
-								<input type="text" name="judul" placeholder="Judul" value="<?= $p->juara ?>" class="input-control" required>
-							</div>
+					<div class="form-group">
+						<label>Keterangan Lomba</label>
+						<textarea name="keterangan" class="input-control" placeholder="Keterangan lomba"><?= $p->keterangan ?></textarea>
+					</div>
 
-							<div class="form-group">
-							<label>Keterangan Lomba</label>
-							<textarea name="keterangan lomba" class="input-control" placeholder="Keterangan lomba"><?= $p->keterangan ?></textarea>
-							</div>
+					<div class="form-group">
+						<label>Gambar</label>
+						<img src="../assets/uploads/prestasi/<?= $p->gambar ?>" width="200px" class="image">
+						<input type="hidden" name="gambar2" value="<?= $p->gambar ?>">
+						<input type="file" name="gambar" class="input-control">
+					</div>
 
-							<div class="form-group">
-								<label>Gambar</label>
-								<img src="../assets/uploads/prestasi/<?= $p->gambar ?>" width="200px" class="image">
-								<input type="hidden" name="gambar2" value="<?= $p->gambar ?>">
-								<input type="file" name="gambar" class="input-control">
-							</div>
+					<button type="button" class="btn" onclick="window.location = 'berita.php'">Kembali</button>
+					<input type="submit" name="submit" value="Simpan" class="btn btn-blue">
 
-							<button type="button" class="btn" onclick="window.location = 'berita.php'">Kembali</button>
-							<input type="submit" name="submit" value="Simpan" class="btn btn-blue">
+				</form>
 
-						</form>
+				<?php
 
-						<?php
+				if (isset($_POST['submit'])) {
 
-							if(isset($_POST['submit'])){
+					$juara 	= addslashes(ucwords($_POST['juara']));
+					$keterangan 	= addslashes($_POST['keterangan']);
+					$currdate = date('Y-m-d H:i:s');
 
-								$juara 	= addslashes(ucwords($_POST['juara']));
-								$ket 	= addslashes($_POST['keterangan']);
-								$currdate = date('Y-m-d H:i:s');
+					if ($_FILES['gambar']['name'] != '') {
 
-								if($_FILES['gambar']['name'] != ''){
+						// echo 'user ganti gambar';
 
-									// echo 'user ganti gambar';
+						$filename 	= $_FILES['gambar']['name'];
+						$tmpname 	= $_FILES['gambar']['tmp_name'];
+						$filesize 	= $_FILES['gambar']['size'];
 
-									$filename 	= $_FILES['gambar']['name'];
-									$tmpname 	= $_FILES['gambar']['tmp_name'];
-									$filesize 	= $_FILES['gambar']['size'];
+						$formatfile = pathinfo($filename, PATHINFO_EXTENSION);
+						$rename 	= 'informasi' . time() . '.' . $formatfile;
 
-									$formatfile = pathinfo($filename, PATHINFO_EXTENSION);
-									$rename 	= 'informasi'.time().'.'.$formatfile;
+						$allowedtype = array('png', 'jpg', 'jpeg', 'gif');
 
-									$allowedtype = array('png', 'jpg', 'jpeg', 'gif');
+						if (!in_array($formatfile, $allowedtype)) {
 
-									if(!in_array($formatfile, $allowedtype)){
+							echo '<div class="alert alert-error">Format file tidak diizinkan.</div>';
 
-										echo '<div class="alert alert-error">Format file tidak diizinkan.</div>';
+							return false;
+						} elseif ($filesize > 1000000) {
 
-										return false;
+							echo '<div class="alert alert-error">Ukuran file tidak boleh lebih dari 1 MB.</div>';
 
-									}elseif($filesize > 1000000){
+							return false;
+						} else {
 
-										echo '<div class="alert alert-error">Ukuran file tidak boleh lebih dari 1 MB.</div>';
+							if (file_exists("../assets/uploads/prestasi/" . $_POST['gambar'])) {
 
-										return false;
+								unlink("../assets/uploads/prestasi/" . $_POST['gambar']);
+							}
 
-									}else{
+							move_uploaded_file($tmpname, "../assets/uploads/prestasi/" . $rename);
+						}
+					} else {
 
-										if(file_exists("../assets/uploads/prestasi/".$_POST['gambar'])){
+						// echo 'user tidak ganti gambar';
 
-											unlink("../assets/uploads/prestasi/".$_POST['gambar']);
+						$rename 	= $_POST['gambar2'];
+					}
 
-										}
-
-										move_uploaded_file($tmpname, "../assets/uploads/prestasi/".$rename);
-
-									}
-
-								}else{
-
-									// echo 'user tidak ganti gambar';
-
-									$rename 	= $_POST['gambar2'];
-
-								}
-
-								$update = mysqli_query($conn, "UPDATE prestasi SET
-										juara = '".$juara."',
-										keterangan = '".$ket."',
-										gambar = '".$rename."',
-										updated_at = '".$currdate."'
-										WHERE id = '".$_GET['id']."'
+					$update = mysqli_query($conn, "UPDATE prestasi SET
+										juara = '" . $juara . "',
+										keterangan = '" . $keterangan . "',
+										gambar = '" . $rename . "',
+										update_at = '" . $currdate . "'
+										WHERE id = '" . $_GET['id'] . "'
 									");
 
 
-								if($update){
-									echo "<script>window.location='berita.php?success=Edit Data Berhasil'</script>";
-								}else{
-									echo 'gagal edit '.mysqli_error($conn);
-								}
+					if ($update) {
+						echo "<script>window.location='berita.php?success=Edit Data Berhasil'</script>";
+					} else {
+						echo 'gagal edit ' . mysqli_error($conn);
+					}
+				}
 
-							}
-
-						?>
-
-					</div>
-
-				</div>
+				?>
 
 			</div>
 
 		</div>
+
+	</div>
+
+</div>
 
 <?php include 'footer.php' ?>
