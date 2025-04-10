@@ -31,7 +31,7 @@
                   <i class="bi bi-envelope flex-shrink-0"></i>
                   <div>
                     <h4>Email:</h4>
-                    <p><?= $p['email'] ?></p>
+                    <p><a href="mailto:<?= $p['email'] ?>"><?= $p['email'] ?></a></p>
                   </div>
                 </div><!-- End Info Item -->
           </div>

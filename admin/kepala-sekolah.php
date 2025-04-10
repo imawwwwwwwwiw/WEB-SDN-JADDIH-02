@@ -38,7 +38,7 @@
 						<input type="file" name="foto_baru" class="input-control">
 					</div>
 
-					<input type="submit" name="submit" value="Simpan Perubahan" class="btn btn-blue">
+					<input type="submit" name="submit" value="Simpan Perubahan" class="btn">
 
 				</form>
 

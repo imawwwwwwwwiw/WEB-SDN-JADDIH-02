@@ -86,7 +86,11 @@ $d = mysqli_fetch_object($identitas);
 					<!-- sub menu -->
 					<ul class="dropdown">
 						<li><a href="ubah-password.php">Ubah Password</a></li>
-						<li><a href="logout.php">Keluar</a></li>
+						<li>
+							<a href="logout.php">
+								<i class="fas fa-sign-out-alt" style="color:crimson; margin-right: 5px;"></i> Keluar
+							</a>
+						</li>
 					</ul>
 				</li>
 			</ul>

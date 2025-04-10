@@ -30,19 +30,13 @@
 						<label>Email</label>
 						<input type="email" name="email" placeholder="Email Sekolah" value="<?= $d->email ?>" class="input-control" required>
 					</div>
-					<!-- 
-					<div class="form-group">
-						<label>Telepon</label>
-						<input type="text" name="telp" placeholder="Telepon Sekolah" value="<?= $d->telepon ?>" class="input-control" required>
-					</div> -->
 
 					<div class="form-group">
 						<label>Alamat</label>
 						<textarea name="alamat" class="input-control" placeholder="Alamat"><?= $d->alamat ?></textarea>
 					</div>
 
-
-					<input type="submit" name="submit" value="Simpan Perubahan" class="btn btn-blue">
+					<input type="submit" name="submit" value="Simpan Perubahan" class="btn">
 
 				</form>
 

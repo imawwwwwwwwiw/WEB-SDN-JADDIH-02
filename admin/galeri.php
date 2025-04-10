@@ -1,24 +1,16 @@
 <?php include 'header.php'; ?>
-
-<!-- Content -->
 <div class="content">
 	<div class="container">
 		<div class="box">
-			<div class="box-header">
-				Galeri
-			</div>
-
+			<div class="box-header">Galeri</div>
 			<div class="box-body">
-				<a href="tambah-galeri.php" class="text-green"><i class="fa fa-plus"></i> Tambah</a>
-
+				<a href="tambah-galeri.php" class="btn" style="background-color:teal;"><i class="fa fa-plus" style="margin-bottom: 20px"></i></a>
 				<?php
 				if (isset($_GET['success'])) {
 					echo "<div class='alert alert-success'>" . $_GET['success'] . "</div>";
-				}
-				?>
-
+				} ?>
 				<form action="">
-					<div class="input-group">
+					<div class="input-group" style="display: flex; align-items: center; gap: 10px;">
 						<input type="text" name="key" placeholder="Pencarian" style="padding: 10px 40%;">
 						<button type="submit" style="font-size: 150%; margin: 3px;"><i class="fa fa-search"></i></button>
 					</div>
@@ -66,8 +58,8 @@
 									<td><img src="../assets/uploads/galeri/<?= $p['foto'] ?>" width="100px"></td>
 									<td><?= $p['keterangan'] ?></td>
 									<td>
-										<a href="edit-galeri.php?id=<?= $p['id'] ?>" title="Edit Data" class="text-orange"><i class="fa fa-edit"></i></a>
-										<a href="hapus.php?idgaleri=<?= $p['id'] ?>" onclick="return confirm('Yakin ingin hapus?')" title="Hapus Data" class="text-red"><i class="fa fa-times"></i></a>
+										<a href="edit-galeri.php?id=<?= $p['id'] ?>" class="btn"><i class="fa fa-edit"></i></a>
+										<a href="hapus.php?idgaleri=<?= $p['id'] ?>" class="btn" style="background-color:firebrick;" onclick="return confirm('Yakin ingin hapus ?')" title="Hapus Data" class="text-red"><i class="fa fa-times"></i></a>
 									</td>
 								</tr>
 							<?php }

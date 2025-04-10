@@ -6,7 +6,7 @@
             <div class="container">
                 <?php
                 include 'koneksi.php';
-                $limit = 3;
+                $limit = 6;
                 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
                 $start = ($page - 1) * $limit;
                 $galeri = mysqli_query($conn, "SELECT * FROM galeri LIMIT $start, $limit");
@@ -20,7 +20,7 @@
                                 <div class="post-img position-relative overflow" style="margin: 10px;">
                                     <div class="icon">
                                         <div class="service-item row position">
-                                            <img src="assets/uploads/galeri/<?= $p['foto'] ?>" class="img-fluid" style="border-radius: 25px;" />
+                                            <img src="assets/uploads/galeri/<?= $p['foto'] ?>" style="border-radius: 25px;" />
                                             <h6><?= $p['keterangan'] ?></h6>
                                         </div>
                                     </div>

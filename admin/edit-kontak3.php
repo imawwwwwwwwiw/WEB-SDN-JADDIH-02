@@ -44,10 +44,8 @@ $k3             = mysqli_fetch_object($kontak3);
                         <label>Email</label>
                         <input type="text" name="email" placeholder="Email" value="<?= $k3->email ?>" class="input-control" required>
                     </div>
-
-                    <button type="button" class="btn" onclick="window.location = 'kontak3.php'">Kembali</button>
-                    <input type="submit" name="submit" value="Simpan" class="btn btn-blue">
-
+                    <button type="button" class="btn" style="background-color:firebrick ;" onclick="window.location = 'fasilitas.php'">Kembali</button>
+                    <input type="submit" name="submit" value="Simpan" class="btn">
                 </form>
 
                 <?php

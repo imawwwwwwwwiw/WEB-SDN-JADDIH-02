@@ -45,7 +45,7 @@
                                     <td><?= $k3['nomor'] ?></td>
                                     <td><?= $k3['email'] ?></td>
                                     <td>
-                                        <a href="edit-kontak3.php?id=<?= $k3['id'] ?>" title="Edit Data" class="text-orange"><i class="fa fa-edit"></i></a>
+                                        <a href="edit-kontak3.php?id=<?= $k3['id'] ?>" class="btn"><i class="fa fa-edit"></i></a>
                                     </td>
                                 </tr>
 

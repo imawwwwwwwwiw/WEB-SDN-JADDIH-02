@@ -1,8 +1,9 @@
 <footer id="footer" class="footer dark-background">
     <div class="container footer-top">
         <div class="row gy-6">
-            <div class="col-lg-4 col-md-6 footer-about">
-                <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Kontak 1 -->
+            <div class="col-lg-4 footer-about text-center">
+                <a href="index.html" class="logo d-flex justify-content-center align-items-center">
                     <span class="sitename">kontak 1</span>
                 </a>
                 <?php
@@ -14,20 +15,19 @@
                             <p><?= $k1['nama'] ?></p>
                             <p><?= $k1['alamat'] ?></p>
                             <p class="mt-3">
-                                <strong>Telepon:</strong>
-                                <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $k1['nomor']) ?>" target="_blank"><?= $k1['nomor'] ?></a>
+                                <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $k2['nomor']) ?>" target="_blank" style="font-size: 28px; color: #25D366;">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
                             </p>
                         </div>
                     <?php }
                 } else { ?>
-
                     Tidak ada data
-
                 <?php } ?>
             </div>
-
-            <div class="col-lg-4 footer-about">
-                <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Kontak 2 -->
+            <div class="col-lg-4 footer-about text-center">
+                <a href="index.html" class="logo d-flex justify-content-center align-items-center">
                     <span class="sitename">kontak 2</span>
                 </a>
                 <?php
@@ -39,20 +39,19 @@
                             <p><?= $k2['nama'] ?></p>
                             <p><?= $k2['alamat'] ?></p>
                             <p class="mt-3">
-                                <strong>Telepon:</strong>
-                                <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $k2['nomor']) ?>" target="_blank"><?= $k2['nomor'] ?></a>
+                                <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $k2['nomor']) ?>" target="_blank" style="font-size: 28px; color: #25D366;">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
                             </p>
                         </div>
                     <?php }
                 } else { ?>
-
                     Tidak ada data
-
                 <?php } ?>
             </div>
-
-            <div class="col-lg-4 col-md-6 footer-about">
-                <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Kontak 3 -->
+            <div class="col-lg-4 footer-about text-center">
+                <a href="index.html" class="logo d-flex justify-content-center align-items-center">
                     <span class="sitename">kontak 3</span>
                 </a>
                 <?php
@@ -64,18 +63,17 @@
                             <p><?= $k3['nama'] ?></p>
                             <p><?= $k3['alamat'] ?></p>
                             <p class="mt-3">
-                                <strong>Telepon:</strong>
-                                <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $k3['nomor']) ?>" target="_blank"><?= $k3['nomor'] ?></a>
+                                <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $k2['nomor']) ?>" target="_blank" style="font-size: 28px; color: #25D366;">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
                             </p>
-
                         </div>
                     <?php }
                 } else { ?>
-
                     Tidak ada data
-
                 <?php } ?>
             </div>
+
         </div>
 
         <div class="container copyright text-center mt-4">
@@ -86,28 +84,8 @@
             </p>
             <div class="credits">
                 Designed by
-                <a href="https://www.instagram.com/imaaaaaaaaaha/">Karimah</a> and
-                <a href="https://www.instagram.com/itz.auliaz">Aulia Azzahra</a>
+                <a href="https://www.instagram.com/imaaaaaaaaaha/" style="color: #25D366;">Karimah</a> and
+                <a href="https://www.instagram.com/itz.auliaz" style="color: #25D366;">Aulia Azzahra</a>
             </div>
         </div>
 </footer>
-
-<!-- Scroll Keatas -->
-<a
-    href="#"
-    id="scroll-top"
-    class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<!-- Vendor JS  -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-<!-- Main JS  -->
-<script src="assets/js/main.js"></script>
-</body>
-
-</html>

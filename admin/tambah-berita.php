@@ -1,5 +1,5 @@
-<?php 
-include 'header.php'; 
+<?php
+include 'header.php';
 // include 'config.php'; // Koneksi database
 
 // session_start();
@@ -7,7 +7,7 @@ include 'header.php';
 //     echo '<div class="alert alert-error">Anda harus login terlebih dahulu.</div>';
 //     exit;
 // }
-// ?>
+?>
 
 <!-- content -->
 <div class="content">
@@ -38,14 +38,12 @@ include 'header.php';
                         <label>Gambar</label>
                         <input type="file" name="gambar" class="input-control" required>
                     </div>
-
-                    <button type="button" class="btn" onclick="window.location = 'berita.php'">Kembali</button>
-                    <input type="submit" name="submit" value="Simpan" class="btn btn-blue">
-
+                    <button type="button" class="btn" style="background-color:firebrick ;" onclick="window.location = 'fasilitas.php'">Kembali</button>
+                    <input type="submit" name="submit" value="Simpan" class="btn">
                 </form>
 
                 <?php
-                if(isset($_POST['submit'])){
+                if (isset($_POST['submit'])) {
 
                     // Pastikan koneksi ke database ada
                     if (!isset($conn)) {
@@ -65,13 +63,13 @@ include 'header.php';
 
                     $allowedtype = array('png', 'jpg', 'jpeg', 'gif');
 
-                    if(!in_array(strtolower($formatfile), $allowedtype)){
+                    if (!in_array(strtolower($formatfile), $allowedtype)) {
                         echo '<div class="alert alert-error">Format file tidak diizinkan.</div>';
-                    } elseif($filesize > 1000000){
+                    } elseif ($filesize > 1000000) {
                         echo '<div class="alert alert-error">Ukuran file tidak boleh lebih dari 1 MB.</div>';
                     } else {
                         $upload_dir = "../assets/uploads/prestasi/";
-                        
+
                         // Cek apakah folder upload ada, jika tidak buat baru
                         if (!is_dir($upload_dir)) {
                             mkdir($upload_dir, 0755, true);
@@ -84,13 +82,13 @@ include 'header.php';
                                 '$rename'
                             )");
 
-							if ($simpan) {
-								echo '<div class="alert alert-success">Data prestasi berhasil disimpan!</div>';
-								header("Location: berita.php"); // Redirect ke halaman berita
-								exit; // Menghentikan eksekusi script setelah redirect
-							} else {
-								echo '<div class="alert alert-error">Gagal menyimpan: ' . mysqli_error($conn) . '</div>';
-							}
+                            if ($simpan) {
+                                echo '<div class="alert alert-success">Data prestasi berhasil disimpan!</div>';
+                                header("Location: berita.php"); // Redirect ke halaman berita
+                                exit; // Menghentikan eksekusi script setelah redirect
+                            } else {
+                                echo '<div class="alert alert-error">Gagal menyimpan: ' . mysqli_error($conn) . '</div>';
+                            }
                         } else {
                             echo '<div class="alert alert-error">Gagal mengupload gambar.</div>';
                         }
@@ -106,4 +104,4 @@ include 'header.php';
 
 </div>
 
-<?php include 'footer.php'; ?>  
+<?php include 'footer.php'; ?>
